@@ -18,7 +18,7 @@ window.PRODUK = [
   { kode: "SCR-005", nama: "glow bar soap", harga: 25000, link: "https://s.shopee.co.id/6fiG6tZryK", foto: "https://img.sanishtech.com/u/a35674c529ffb5bdace397e7c7377552.jpg" },
   { kode: "SCR-006", nama: "sunscreen 40g day+night", harga: 75000, link: "https://s.shopee.co.id/3g4erNZrd2", foto: "https://img.sanishtech.com/u/4db263d2481f18ffd59a88eb7c26c8ac.jpg" },
   { kode: "SCR-001", nama: "toner series", harga: 25000, link: "https://s.shopee.co.id/7fanct76sT", foto: "https://img.sanishtech.com/u/8142fe899e3344ad729ce8c789bc0f1f.jpg" },
-  { kode: "SCR-001", nama: "serum series 20 ml", harga: 30000, link: "https://s.shopee.co.id/AAI8BpSEOm", foto: "https://img.sanishtech.com/u/28869193156cf8a31ceec57d891dded7.jpg" },
-  { kode: "SCR-001", nama: "serum series 20 ml", harga: 30000, link: "https://s.shopee.co.id/AAI8BpSEOm", foto: "https://img.sanishtech.com/u/28869193156cf8a31ceec57d891dded7.jpg" },
+  { kode: "SCR-001", nama: "hydramoist gel", harga: 38000, link: "https://s.shopee.co.id/9pfIDynlP7", foto: "https://img.sanishtech.com/u/04d311be1259595e91b746157ff33697.jpg" },
+  { kode: "SCR-001", nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "https://img.sanishtech.com/u/150a8c87636091b576227ff2ee522c9d.jpg" },
   
 ];
