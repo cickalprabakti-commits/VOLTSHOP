@@ -13,7 +13,7 @@ window.TOKO = {
 window.PRODUK = [
   { kode: "SCR-001", nama: "serum series 20 ml", harga: 30000, link: "https://s.shopee.co.id/AAI8BpSEOm", foto: "https://img.sanishtech.com/u/a1fc00feed269e91bd900f68ccd351bb.jpg" },
   { kode: "SCR-002", nama: "brightening facial wash", harga: 50000, link: "https://s.shopee.co.id/8pmkf1cwkP", foto: "https://img.sanishtech.com/u/1d607988044da69f3f7bf47de19f0350.jpg" },
-  { kode: "SCR-003", nama: "GANTI NAMA PRODUK", harga: 25000, link: "GANTI LINK SHOPEE", foto: "scr-003.jpg" },
-  { kode: "SCR-004", nama: "GANTI NAMA PRODUK", harga: 35000, link: "GANTI LINK SHOPEE", foto: "scr-004.jpg" },
-  { kode: "SCR-005", nama: "GANTI NAMA PRODUK", harga: 25000, link: "GANTI LINK SHOPEE", foto: "scr-005.jpg" }
+  { kode: "SCR-003", nama: "perfect spray series 60ml", harga: 25000, link: "https://s.shopee.co.id/6AlzUvq00U", foto: "https://img.sanishtech.com/u/d04dfd178ea9ec68634d017b8cd74ba8.jpg" },
+  { kode: "SCR-004", nama: "whitening night cream", harga: 33000, link: "https://s.shopee.co.id/8V9uHPnt36", foto: "https://img.sanishtech.com/u/313064627a594fe4b2a03bb93e0cd308.jpg" },
+  { kode: "SCR-005", nama: "glow bar soap", harga: 25000, link: "https://s.shopee.co.id/6fiG6tZryK", foto: "scr-005.jpg" }
 ];
