@@ -3,7 +3,7 @@
 // ============================================================
 
 window.TOKO = {
-  nama: "Toko Saya",
+  nama: "VOLTSHOP",
   slogan: "Produk pilihan dengan harga terbaik. Temukan yang Anda butuhkan, lalu pesan langsung lewat tautan resmi.",
   whatsapp: "" // opsional, contoh: "6281234567890" (awali 62, tanpa + atau spasi). Kosongkan jika tidak dipakai.
 };
@@ -14,9 +14,9 @@ window.PRODUK = [
   // CONTOH (hapus tanda // di depan tiap baris untuk memakainya, atau salin lalu ganti isinya):
   // {
   //   kode: "SCR-001",
-  //   nama: "Nama Produk",
+  //   nama: "Serum series 20ml",
   //   harga: 30000,
-  //   link: "https://shopee.co.id/link-produk-anda",
+  //   link: "https://s.shopee.co.id/AAI8BpSEOm",
   //   foto: "foto/scr-001.jpg"
   // },
 ];
