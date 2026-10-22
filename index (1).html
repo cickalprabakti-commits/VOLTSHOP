@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toko Online</title>
+<style>
+:root{--bg:#f4f6fa;--surface:#fff;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--brand:#2563eb;--brand-d:#1e3a8a;--hdr:rgba(255,255,255,.92)}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--surface:#111a2e;--text:#e8edf7;--muted:#94a3b8;--line:#22304d;--hdr:rgba(11,18,32,.92);color-scheme:dark}.price{color:#93b4ff!important}}
+html{scroll-padding-top:64px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+header{position:sticky;top:0;z-index:20;background:var(--hdr);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.logo i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-d));display:grid;place-items:center;color:#fff;font-style:normal;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:.92rem}
+nav a:hover{color:var(--brand)}
+.hero{background:radial-gradient(900px 400px at 85% -10%,rgba(245,158,11,.22),transparent 60%),radial-gradient(700px 400px at 0% 110%,rgba(37,99,235,.55),transparent 60%),linear-gradient(135deg,#0a1630,#14306b 60%,#1d4ed8);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 90%);-webkit-mask-image:linear-gradient(to bottom,#000,transparent 90%);pointer-events:none}
+.hero .in{max-width:1120px;margin:auto;padding:64px 20px 72px;position:relative;z-index:1}
+.chip{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:99px;font-size:.8rem;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 12px;max-width:680px}
+.hero p{margin:0 0 26px;max-width:560px;color:#cfdcff;font-size:1.05rem}
+.search{display:flex;gap:8px;max-width:520px;background:#fff;border-radius:12px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.search input{flex:1;border:0;outline:0;padding:10px 12px;font:inherit;background:transparent;color:#0f172a;min-width:0}
+.btn{border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:10px;padding:10px 18px;background:var(--brand);color:#fff;text-decoration:none;display:inline-block;text-align:center}
+.btn:hover{filter:brightness(1.08)}
+main{max-width:1120px;margin:auto;padding:36px 20px 20px}
+h2{margin:0 0 4px;font-size:1.5rem}
+.sub{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.12)}
+.ph{aspect-ratio:1/1;background:var(--line);display:grid;place-items:center;color:var(--muted);font-size:.85rem}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.code{font-size:.72rem;font-weight:700;color:var(--brand);letter-spacing:.06em}
+.name{font-weight:700}
+.price{font-size:1.2rem;font-weight:800;color:var(--brand-d);margin-top:auto}
+.card .btn{margin-top:8px;padding:9px 10px;font-size:.9rem}
+.empty{grid-column:1/-1;text-align:center;padding:56px 20px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:16px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:40px 0 0}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.feat b{display:block;margin-bottom:4px}
+.feat span{color:var(--muted);font-size:.92rem}
+footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.wa{position:fixed;right:18px;bottom:18px;background:#16a34a;color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:30}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="produk.js"></script>
+<script>
+(function () {
+  var T = window.TOKO || {}, P = window.PRODUK || [], q = '';
+  var nama = T.nama || 'Toko Saya';
+  document.title = nama;
+  function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function rp(n){return 'Rp ' + new Intl.NumberFormat('id-ID').format(n||0)}
+  function safe(u){return /^https?:\/\//i.test(u||'') ? u : '#'}
+  function grid(){
+    var k = q.trim().toLowerCase();
+    var l = P.filter(function(p){return !k || ((p.nama||'')+' '+(p.kode||'')).toLowerCase().indexOf(k) > -1});
+    if(!l.length) return '<div class="empty">'+(P.length?'Produk tidak ditemukan. Coba kata kunci atau kode lain.':'Produk akan segera hadir. Silakan kembali lagi nanti.')+'</div>';
+    return l.map(function(p){
+      return '<article class="card"><div class="ph">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="'+esc(p.nama)+'" loading="lazy" onerror="this.replaceWith(document.createTextNode(\'Tanpa foto\'))">':'Tanpa foto')+'</div>'+
+        '<div class="body">'+(p.kode?'<div class="code">'+esc(p.kode)+'</div>':'')+
+        '<div class="name">'+esc(p.nama)+'</div><div class="price">'+rp(p.harga)+'</div>'+
+        '<a class="btn" href="'+esc(safe(p.link))+'" target="_blank" rel="noopener noreferrer">Lihat &amp; Beli</a></div></article>';
+    }).join('');
+  }
+  var wa = T.whatsapp ? '<a class="wa" href="https://wa.me/'+esc(T.whatsapp)+'" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>' : '';
+  document.getElementById('app').innerHTML =
+    '<header><div class="bar"><div class="logo"><i>'+esc(nama.trim().charAt(0).toUpperCase())+'</i>'+esc(nama)+'</div>'+
+    '<nav><a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#tentang">Tentang</a></nav></div></header>'+
+    '<section class="hero" id="beranda"><div class="in"><span class="chip">Belanja mudah &amp; terpercaya</span><h1>'+esc(nama)+'</h1><p>'+esc(T.slogan||'')+'</p>'+
+    '<div class="search"><input id="q" type="search" placeholder="Cari nama atau kode produk…"><a class="btn" href="#produk">Cari</a></div></div></section>'+
+    '<main><h2 id="produk">Produk Kami</h2><p class="sub">'+P.length+' produk tersedia. Klik “Lihat &amp; Beli” untuk menuju halaman pemesanan.</p>'+
+    '<div class="grid" id="grid">'+grid()+'</div>'+
+    '<div class="feats" id="tentang"><div class="feat"><b>Pilihan terkurasi</b><span>Setiap produk dipilih dan diperbarui langsung oleh pemilik toko.</span></div>'+
+    '<div class="feat"><b>Harga jelas</b><span>Harga tercantum di setiap produk, tanpa perlu mendaftar atau login.</span></div>'+
+    '<div class="feat"><b>Pesan lewat link resmi</b><span>Pembelian diarahkan ke tautan produk yang aman dan terpercaya.</span></div></div></main>'+
+    '<footer><span>© '+new Date().getFullYear()+' '+esc(nama)+'</span><span>Semua hak dilindungi</span></footer>'+wa;
+  document.getElementById('q').addEventListener('input', function(e){ q = e.target.value; document.getElementById('grid').innerHTML = grid(); });
+})();
+</script>
+</body>
+</html>
