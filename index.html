@@ -64,7 +64,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
     var l = P.filter(function(p){return !k || ((p.nama||'')+' '+(p.kode||'')).toLowerCase().indexOf(k) > -1});
     if(!l.length) return '<div class="empty">'+(P.length?'Produk tidak ditemukan. Coba kata kunci atau kode lain.':'Produk akan segera hadir. Silakan kembali lagi nanti.')+'</div>';
     return l.map(function(p){
-      return '<article class="card"><div class="ph">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="'+esc(p.nama)+'" loading="lazy" onerror="this.replaceWith(document.createTextNode(\'Tanpa foto\'))">':'Tanpa foto')+'</div>'+
+      return '<article class="card"><div class="ph">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="'+esc(p.nama)+'" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\'Tanpa foto\'))">':'Tanpa foto')+'</div>'+
         '<div class="body">'+(p.kode?'<div class="code">'+esc(p.kode)+'</div>':'')+
         '<div class="name">'+esc(p.nama)+'</div><div class="price">'+rp(p.harga)+'</div>'+
         '<a class="btn" href="'+esc(safe(p.link))+'" target="_blank" rel="noopener noreferrer">Lihat &amp; Beli</a></div></article>';
