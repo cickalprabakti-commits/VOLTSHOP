@@ -28,4 +28,10 @@ window.PRODUK = [
   { kode: "kf-004", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
   
 ];
+window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "Kecantikan"; });
+window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "aksesoris"; });
+window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "furniture"; });
+
+
+
