@@ -14,6 +14,8 @@ header{position:sticky;top:0;z-index:20;background:var(--hdr);backdrop-filter:bl
 .bar{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:10px}
 .logo i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-d));display:grid;place-items:center;color:#fff;font-style:normal;font-size:.95rem}
+.logo img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.65);margin-bottom:14px;display:block}
 nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:.92rem}
 nav a:hover{color:var(--brand)}
 .hero{background:radial-gradient(900px 400px at 85% -10%,rgba(245,158,11,.22),transparent 60%),radial-gradient(700px 400px at 0% 110%,rgba(37,99,235,.55),transparent 60%),linear-gradient(135deg,#0a1630,#14306b 60%,#1d4ed8);color:#fff;position:relative;overflow:hidden}
@@ -55,6 +57,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
 (function () {
   var T = window.TOKO || {}, P = window.PRODUK || [], q = '';
   var nama = T.nama || 'Toko Saya';
+  var fp = T.logo ? esc(T.logo) : '';
   document.title = nama;
   function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function rp(n){return 'Rp ' + new Intl.NumberFormat('id-ID').format(n||0)}
@@ -72,9 +75,9 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
   }
   var wa = T.whatsapp ? '<a class="wa" href="https://wa.me/'+esc(T.whatsapp)+'" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>' : '';
   document.getElementById('app').innerHTML =
-    '<header><div class="bar"><div class="logo"><i>'+esc(nama.trim().charAt(0).toUpperCase())+'</i>'+esc(nama)+'</div>'+
+    '<header><div class="bar"><div class="logo">'+(fp?'<img src="'+fp+'" alt="'+esc(nama)+'" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">':'<i>'+esc(nama.trim().charAt(0).toUpperCase())+'</i>')+esc(nama)+'</div>'+
     '<nav><a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#tentang">Tentang</a></nav></div></header>'+
-    '<section class="hero" id="beranda"><div class="in"><span class="chip">Belanja mudah &amp; terpercaya</span><h1>'+esc(nama)+'</h1><p>'+esc(T.slogan||'')+'</p>'+
+    '<section class="hero" id="beranda"><div class="in">'+(fp?'<img class="avatar" src="'+fp+'" alt="'+esc(nama)+'" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">':'')+'<span class="chip">Belanja mudah &amp; terpercaya</span><h1>'+esc(nama)+'</h1><p>'+esc(T.slogan||'')+'</p>'+
     '<div class="search"><input id="q" type="search" placeholder="Cari nama atau kode produk…"><a class="btn" href="#produk">Cari</a></div></div></section>'+
     '<main><h2 id="produk">Produk Kami</h2><p class="sub">'+P.length+' produk tersedia. Klik “Lihat &amp; Beli” untuk menuju halaman pemesanan.</p>'+
     '<div class="grid" id="grid">'+grid()+'</div>'+
