@@ -22,10 +22,10 @@ window.PRODUK = [
   { kode: "SCR-007",kategori: "kecantikan", nama: "toner series", harga: 25000, link: "https://s.shopee.co.id/7fanct76sT", foto: "scr-007.jpg" },
   { kode: "SCR-008",kategori: "kecantikan", nama: "hydramoist gel", harga: 38000, link: "https://s.shopee.co.id/9pfIDynlP7", foto: "scr-008.jpg" },
   { kode: "SCR-009",kategori: "kecantikan", nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "scr-009.jpg" },
-  { kode: "kf-001",kategori: "kecantikan", nama: "kahf invigorating waterfall 35 ml", harga: 65000, link: "https://s.shopee.co.id/1LglG0q5CS", foto: "kf-001.jpg" },
-  { kode: "kf-002",kategori: "kecantikan", nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "kf-002.jpg" },
-  { kode: "kf-003",kategori: "kecantikan", nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "kf-003.jpg" },
-  { kode: "kf-004",kategori: "kecantikan", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
+  { kode: "kf-001",kategori: "minyak wangi", nama: "kahf invigorating waterfall 35 ml", harga: 65000, link: "https://s.shopee.co.id/1LglG0q5CS", foto: "kf-001.jpg" },
+  { kode: "kf-002",kategori: "minyak wangi", nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "kf-002.jpg" },
+  { kode: "kf-003",kategori: "minyak wangi", nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "kf-003.jpg" },
+  { kode: "kf-004",kategori: "minyak wangi", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
   
 ];
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
