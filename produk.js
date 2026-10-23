@@ -26,8 +26,7 @@ window.PRODUK = [
   { kode: "kf-002",kategori: "minyak wangi", nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "kf-002.jpg" },
   { kode: "kf-003",kategori: "minyak wangi", nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "kf-003.jpg" },
   { kode: "kf-004",kategori: "minyak wangi", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
-  { kode: "mch-001",kategori: "fashion", nama: "longsleeve wild hourse-mouche", harga: 230000, link: "https://s.shopee.co.id/1BNqDwX35", foto: "" },
-  
+  { kode: "mch-001",kategori: "fashion", nama: "longsleeve wild hourse-mouche", harga: 230000, link: "https://s.shopee.co.id/1BNqDwX35", foto: ["mch-001.jpg", "mch-001-b.jpg"] },
 ];
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "scincare"; });
