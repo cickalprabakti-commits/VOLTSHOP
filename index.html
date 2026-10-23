@@ -18,6 +18,16 @@ header{position:sticky;top:0;z-index:20;background:var(--hdr);backdrop-filter:bl
 .chip2{white-space:nowrap;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:8px 16px;border-radius:99px;font:inherit;font-weight:600;font-size:.9rem;cursor:pointer}
 .chip2:hover{border-color:var(--brand)}
 .chip2.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.ph{position:relative;overflow:hidden}
+.slides{display:flex;width:100%;height:100%;align-self:stretch;justify-self:stretch;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.slides::-webkit-scrollbar{display:none}
+.slides img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.dots{position:absolute;bottom:9px;left:0;right:0;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.dots i{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.18);transition:width .2s,background .2s}
+.dots i.on{width:18px;background:#fff}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:1.2rem;line-height:1;cursor:pointer;display:none;place-items:center;padding:0}
+.arr.l{left:8px}.arr.r{right:8px}
+@media (hover:hover){.arr{display:grid}}
 .logo img{width:34px;height:34px;border-radius:50%;object-fit:cover}
 .avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.65);margin-bottom:14px;display:block}
 nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:.92rem}
@@ -67,6 +77,15 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
   function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function rp(n){return 'Rp ' + new Intl.NumberFormat('id-ID').format(n||0)}
   function safe(u){return /^https?:\/\//i.test(u||'') ? u : '#'}
+  function foto(p){
+    var a = (Array.isArray(p.foto) ? p.foto : (p.foto ? [p.foto] : [])).filter(Boolean);
+    if(!a.length) return 'Tanpa foto';
+    var alt = esc(p.nama);
+    if(a.length === 1) return '<img src="'+esc(a[0])+'" alt="'+alt+'" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\'Tanpa foto\'))">';
+    var im = a.map(function(u,i){return '<img src="'+esc(u)+'" alt="'+alt+' '+(i+1)+'" referrerpolicy="no-referrer" onerror="this.style.visibility=\'hidden\'">'}).join('');
+    var dt = a.map(function(u,i){return '<i'+(i===0?' class="on"':'')+'></i>'}).join('');
+    return '<div class="slides">'+im+'</div><button class="arr l" data-d="l" aria-label="Foto sebelumnya">&#8249;</button><button class="arr r" data-d="r" aria-label="Foto berikutnya">&#8250;</button><div class="dots">'+dt+'</div>';
+  }
   function chips(){
     var n=function(k){return P.filter(function(p){return (p.kategori||'').toLowerCase()===k.toLowerCase()}).length};
     return ['Semua'].concat(KAT).map(function(k){
@@ -79,7 +98,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
     var l = P.filter(function(p){return (!k || ((p.nama||'')+' '+(p.kode||'')).toLowerCase().indexOf(k) > -1) && (!c || (p.kategori||'').toLowerCase() === c.toLowerCase())});
     if(!l.length) return '<div class="empty">'+(P.length?(c&&!k?'Belum ada produk di kategori ini. Silakan kembali lagi nanti.':'Produk tidak ditemukan. Coba kata kunci atau kode lain.'):'Produk akan segera hadir. Silakan kembali lagi nanti.')+'</div>';
     return l.map(function(p){
-      return '<article class="card"><div class="ph">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="'+esc(p.nama)+'" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\'Tanpa foto\'))">':'Tanpa foto')+'</div>'+
+      return '<article class="card"><div class="ph">'+foto(p)+'</div>'+
         '<div class="body">'+((p.kode||p.kategori)?'<div class="code">'+esc(p.kode||'')+(p.kode&&p.kategori?' · ':'')+esc(p.kategori||'')+'</div>':'')+
         '<div class="name">'+esc(p.nama)+'</div><div class="price">'+rp(p.harga)+'</div>'+
         '<a class="btn" href="'+esc(safe(p.link))+'" target="_blank" rel="noopener noreferrer">Lihat &amp; Beli</a></div></article>';
@@ -98,6 +117,18 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
     '<div class="feat"><b>Harga jelas</b><span>Harga tercantum di setiap produk, tanpa perlu mendaftar atau login.</span></div>'+
     '<div class="feat"><b>Pesan lewat link resmi</b><span>Pembelian diarahkan ke tautan produk yang aman dan terpercaya.</span></div></div></main>'+
     '<footer><span>© '+new Date().getFullYear()+' '+esc(nama)+'</span><span>Semua hak dilindungi</span></footer>'+wa;
+  var gridEl = document.getElementById('grid');
+  gridEl.addEventListener('scroll', function(e){
+    var t = e.target; if(!t.classList || !t.classList.contains('slides')) return;
+    var i = Math.round(t.scrollLeft / (t.clientWidth || 1));
+    var d = t.parentNode.querySelectorAll('.dots i');
+    for(var j=0;j<d.length;j++) d[j].className = (j===i ? 'on' : '');
+  }, true);
+  gridEl.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.arr') : null; if(!b) return;
+    var sl = b.parentNode.querySelector('.slides');
+    sl.scrollBy({left:(b.getAttribute('data-d')==='r'?1:-1)*sl.clientWidth, behavior:'smooth'});
+  });
   document.getElementById('chips').addEventListener('click', function(e){
     var b = e.target.closest ? e.target.closest('[data-k]') : null; if(!b) return;
     var k = b.getAttribute('data-k'); c = (k==='Semua') ? '' : k;
