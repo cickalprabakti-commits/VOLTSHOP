@@ -4,9 +4,9 @@
 
 window.TOKO = {
   nama: "VOLTSHOP",
-    logo: "logo.jpg",
+    logo: " logo.jpg",
   slogan: "Produk pilihan dengan harga terbaik. Temukan yang Anda butuhkan, lalu pesan langsung lewat tautan resmi.",
-  whatsapp: "" // opsional, contoh: "6281234567890" (awali 62, tanpa + atau spasi). Kosongkan jika tidak dipakai.
+  whatsapp: "6281234567890",
 };
 
 // Setiap produk ditulis di antara { ... }, dipisah koma.
