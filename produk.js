@@ -24,6 +24,6 @@ window.PRODUK = [
   { kode: "kf-001.jpg", nama: "kahf invigorating waretfall 35 ml", harga: 65000, link: "https://s.shopee.co.id/1LglG0q5CS", foto: "" },
   { kode: "kf-002.jpg", nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "" },
   { kode: "kf-003.jpg", nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "" },
-  { kode: "kf-003.jpg", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "" },
+  { kode: "kf-004.jpg", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "" },
   
 ];
