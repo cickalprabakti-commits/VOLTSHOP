@@ -4,6 +4,7 @@
 
 window.TOKO = {
   nama: "VOLTSHOP",
+    kategori: ["Fashion", "Kecantikan", "Aksesoris", "Furniture", "Elektronik"],
     logo: "https://img.sanishtech.com/u/35a641c7fc151e2a64d24e4fa90dc92b.jpg",
   slogan: "Produk pilihan dengan harga terbaik. Temukan yang Anda butuhkan, lalu pesan langsung lewat tautan resmi.",
   whatsapp: "6283171293220",
