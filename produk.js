@@ -13,19 +13,19 @@ window.TOKO = {
 // Setiap produk ditulis di antara { ... }, dipisah koma.
 // Foto: taruh file gambar di folder "foto", lalu tulis nama filenya di bawah.
 window.PRODUK = [
-  { kode: "SCR-001",kategori: "kecantikan" nama: "serum series 20 ml", harga: 30000, link: "https://s.shopee.co.id/AAI8BpSEOm", foto: "scr-001.jpg" },
-  { kode: "SCR-002",kategori: "kecantikan" nama: "brightening facial wash", harga: 50000, link: "https://s.shopee.co.id/8pmkf1cwkP", foto: "scr-002.jpg" },
-  { kode: "SCR-003",kategori: "kecantikan" nama: "perfect spray series 60ml", harga: 25000, link: "https://s.shopee.co.id/6AlzUvq00U", foto: "scr-003.jpg" },
-  { kode: "SCR-004",kategori: "kecantikan" nama: "whitening night cream", harga: 33000, link: "https://s.shopee.co.id/8V9uHPnt36", foto: "scr-004.jpg" },
-  { kode: "SCR-005",kategori: "kecantikan" nama: "glow bar soap", harga: 25000, link: "https://s.shopee.co.id/6fiG6tZryK", foto: "scr-005.jpg" },
-  { kode: "SCR-006",kategori: "kecantikan" nama: "sunscreen 40g day+night", harga: 75000, link: "https://s.shopee.co.id/3g4erNZrd2", foto: "scr-006.jpg" },
-  { kode: "SCR-007",kategori: "kecantikan" nama: "toner series", harga: 25000, link: "https://s.shopee.co.id/7fanct76sT", foto: "scr-007.jpg" },
-  { kode: "SCR-008",kategori: "kecantikan" nama: "hydramoist gel", harga: 38000, link: "https://s.shopee.co.id/9pfIDynlP7", foto: "scr-008.jpg" },
-  { kode: "SCR-009",kategori: "kecantikan" nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "scr-009.jpg" },
-  { kode: "kf-001",kategori: "kecantikan" nama: "kahf invigorating waretfall 35 ml", harga: 65000, link: "https://s.shopee.co.id/1LglG0q5CS", foto: "kf-001.jpg" },
-  { kode: "kf-002",kategori: "kecantikan" nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "kf-002.jpg" },
-  { kode: "kf-003",kategori: "kecantikan" nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "kf-003.jpg" },
-  { kode: "kf-004",kategori: "kecantikan" nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
+  { kode: "SCR-001",kategori: "kecantikan", nama: "serum series 20 ml", harga: 30000, link: "https://s.shopee.co.id/AAI8BpSEOm", foto: "scr-001.jpg" },
+  { kode: "SCR-002",kategori: "kecantikan", nama: "brightening facial wash", harga: 50000, link: "https://s.shopee.co.id/8pmkf1cwkP", foto: "scr-002.jpg" },
+  { kode: "SCR-003",kategori: "kecantikan", nama: "perfect spray series 60ml", harga: 25000, link: "https://s.shopee.co.id/6AlzUvq00U", foto: "scr-003.jpg" },
+  { kode: "SCR-004",kategori: "kecantikan", nama: "whitening night cream", harga: 33000, link: "https://s.shopee.co.id/8V9uHPnt36", foto: "scr-004.jpg" },
+  { kode: "SCR-005",kategori: "kecantikan", nama: "glow bar soap", harga: 25000, link: "https://s.shopee.co.id/6fiG6tZryK", foto: "scr-005.jpg" },
+  { kode: "SCR-006",kategori: "kecantikan", nama: "sunscreen 40g day+night", harga: 75000, link: "https://s.shopee.co.id/3g4erNZrd2", foto: "scr-006.jpg" },
+  { kode: "SCR-007",kategori: "kecantikan", nama: "toner series", harga: 25000, link: "https://s.shopee.co.id/7fanct76sT", foto: "scr-007.jpg" },
+  { kode: "SCR-008",kategori: "kecantikan", nama: "hydramoist gel", harga: 38000, link: "https://s.shopee.co.id/9pfIDynlP7", foto: "scr-008.jpg" },
+  { kode: "SCR-009",kategori: "kecantikan", nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "scr-009.jpg" },
+  { kode: "kf-001",kategori: "kecantikan", nama: "kahf invigorating waretfall 35 ml", harga: 65000, link: "https://s.shopee.co.id/1LglG0q5CS", foto: "kf-001.jpg" },
+  { kode: "kf-002",kategori: "kecantikan", nama: "kahf revered oud 35 ml", harga: 65000, link: "https://s.shopee.co.id/8V9vnM2LRy", foto: "kf-002.jpg" },
+  { kode: "kf-003",kategori: "kecantikan", nama: "kahf humbling forest 35 ml", harga: 65000, link: "https://s.shopee.co.id/2LZIRkkVQr", foto: "kf-003.jpg" },
+  { kode: "kf-004",kategori: "kecantikan", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
   
 ];
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
