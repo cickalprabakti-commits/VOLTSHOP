@@ -20,6 +20,6 @@ window.PRODUK = [
   { kode: "SCR-006", nama: "sunscreen 40g day+night", harga: 75000, link: "https://s.shopee.co.id/3g4erNZrd2", foto: "https://cdn.phototourl.com/member/2026-10-23-b6722fce-0b14-4a87-b6cd-9d5fa41f41c6.jpg" },
   { kode: "SCR-007", nama: "toner series", harga: 25000, link: "https://s.shopee.co.id/7fanct76sT", foto: "https://cdn.phototourl.com/member/2026-10-23-b041105a-0fc7-40d3-ba6f-73a1c4146071.jpg" },
   { kode: "SCR-008", nama: "hydramoist gel", harga: 38000, link: "https://s.shopee.co.id/9pfIDynlP7", foto: "https://cdn.phototourl.com/member/2026-10-23-3ef77fe0-7bf9-41f7-9ba3-70d53e3eee42.jpg" },
-  { kode: "SCR-009", nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "https://img.sanishtech.com/u/150a8c87636091b576227ff2ee522c9d.jpg" },
+  { kode: "SCR-009", nama: "3-bundle scora cleanser+toner+serum", harga: 90000, link: "https://s.shopee.co.id/113tiF0TvE", foto: "https://img.sanishtech.co" },
   
 ];
