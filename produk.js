@@ -35,7 +35,7 @@ window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "scincare"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "aksesoris"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "furniture"; });
-window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "minyak wangi"; });
+window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "perfume"; });
 
 
 
