@@ -30,6 +30,19 @@ window.PRODUK = [
   { kode: "kf-004",kategori: "perfume", nama: "kahf true brotherhood 35 ml", harga: 65000, link: "https://s.shopee.co.id/5q9AcKm6jB", foto: "kf-004.jpg" },
   { kode: "mch-001",kategori: "fashion", nama: "longsleeve wild hourse-mouche", harga: 230000, link: "https://s.shopee.co.id/1BNqDwX35", foto:["mch-001.jpg","mch-001-b.jpg"] },
   { kode: "vb-001",kategori: "fashion", nama: "relax shirt-vobia", harga: 250000, link: "https://s.shopee.co.id/6VOsYuUQK0", foto:["vb-001.jpg","vb-001-b.jpg","vb-001-c.jpg","vb-001-d.jpg"] },
+  { kode: "ts-001",kategori: "fashion", nama: "tas Selempang wanita", harga: 25000, link: "https://s.shopee.co.id/3qO84ASYh2", foto:["ts-001.jpg","ts-001-b.jpg","ts-001-c.jpg","ts-001-d.jpg"] },
+
+
+
+
+
+
+
+
+
+
+
+    
 ];
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "fashion"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "scincare"; });
