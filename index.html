@@ -28,6 +28,8 @@ header{position:sticky;top:0;z-index:20;background:var(--hdr);backdrop-filter:bl
 .arr{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:1.2rem;line-height:1;cursor:pointer;display:none;place-items:center;padding:0}
 .arr.l{left:8px}.arr.r{right:8px}
 @media (hover:hover){.arr{display:grid}}
+.full .ph img,.full .slides img{object-fit:contain}
+@media (max-width:560px){.grid.tall{grid-template-columns:repeat(2,1fr);gap:12px}.grid.tall .body{padding:12px}}
 .logo img{width:34px;height:34px;border-radius:50%;object-fit:cover}
 .avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.65);margin-bottom:14px;display:block}
 nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:.92rem}
@@ -48,7 +50,7 @@ h2{margin:0 0 4px;font-size:1.5rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.12)}
-.ph{aspect-ratio:1/1;background:var(--line);display:grid;place-items:center;color:var(--muted);font-size:.85rem}
+.ph{aspect-ratio:var(--rasio,1/1);background:var(--line);display:grid;place-items:center;color:var(--muted);font-size:.85rem}
 .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .code{font-size:.72rem;font-weight:700;color:var(--brand);letter-spacing:.06em}
@@ -72,6 +74,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
   var T = window.TOKO || {}, P = window.PRODUK || [], q = '', c = '';
   var KAT = (T.kategori && T.kategori.length) ? T.kategori : ['Fashion','Kecantikan','Aksesoris','Furniture'];
   var nama = T.nama || 'Toko Saya';
+  var rs = (function(){var r=String(T.rasioFoto||'').replace(':','/').replace(/\s/g,''); return /^\d+(\.\d+)?\/\d+(\.\d+)?$/.test(r) ? r : '';})();
   var fp = T.logo ? esc(T.logo) : '';
   document.title = nama;
   function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -112,7 +115,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
     '<div class="search"><input id="q" type="search" placeholder="Cari nama atau kode produk…"><a class="btn" href="#produk">Cari</a></div></div></section>'+
     '<main><h2 id="produk">Produk Kami</h2><p class="sub">'+P.length+' produk tersedia. Klik “Lihat &amp; Beli” untuk menuju halaman pemesanan.</p>'+
     '<div class="chips" id="chips">'+chips()+'</div>'+
-    '<div class="grid" id="grid">'+grid()+'</div>'+
+    '<div class="grid'+(T.fotoPenuh?' full':'')+(rs?' tall':'')+'" id="grid"'+(rs?' style="--rasio:'+rs+'"':'')+'>'+grid()+'</div>'+
     '<div class="feats" id="tentang"><div class="feat"><b>Pilihan terkurasi</b><span>Setiap produk dipilih dan diperbarui langsung oleh pemilik toko.</span></div>'+
     '<div class="feat"><b>Harga jelas</b><span>Harga tercantum di setiap produk, tanpa perlu mendaftar atau login.</span></div>'+
     '<div class="feat"><b>Pesan lewat link resmi</b><span>Pembelian diarahkan ke tautan produk yang aman dan terpercaya.</span></div></div></main>'+
