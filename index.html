@@ -72,7 +72,7 @@ footer{max-width:1120px;margin:30px auto 0;padding:24px 20px 40px;color:var(--mu
 <script>
 (function () {
   var T = window.TOKO || {}, P = window.PRODUK || [], q = '', c = '';
-  var KAT = (T.kategori && T.kategori.length) ? T.kategori : ['Fashion','Kecantikan','Aksesoris','Furniture'];
+  var KAT = (T.kategori && T.kategori.length) ? T.kategori : ['Fashion','Kecantikan','Aksesoris','Furniture','perfume'];
   var nama = T.nama || 'Toko Saya';
   var rs = (function(){var r=String(T.rasioFoto||'').replace(':','/').replace(/\s/g,''); return /^\d+(\.\d+)?\/\d+(\.\d+)?$/.test(r) ? r : '';})();
   var fp = T.logo ? esc(T.logo) : '';
