@@ -3,6 +3,8 @@
 // ============================================================
 
 window.TOKO = {
+    rasioFoto: "9/16",
+  fotoPenuh: true,
   nama: "VOLTSHOP",
     kategori: ["Fashion", "scincare", "Aksesoris", "Furniture", "minyak wangi"],
     logo: "https://img.sanishtech.com/u/35a641c7fc151e2a64d24e4fa90dc92b.jpg",
