@@ -32,7 +32,7 @@ window.PRODUK = [
   { kode: "vb-001",kategori: "fashion", nama: "relax shirt-vobia", harga: 250000, link: "https://s.shopee.co.id/6VOsYuUQK0", foto:["vb-001.jpg","vb-001-b.jpg","vb-001-c.jpg","vb-001-d.jpg"] },
   { kode: "ts-001",kategori: "fashion", nama: "tas Selempang wanita", harga: 25000, link: "https://s.shopee.co.id/3qO84ASYh2", foto:["ts-001.jpg","ts-001-b.jpg","ts-001-c.jpg","ts-001-d.jpg"] },
   { kode: "cne-001",kategori: "aksesoris", nama: "Uzi Necklace-The Goats Dept", harga: 10000, link: "https://s.shopee.co.id/3qO8HsDwcL", foto:["cne-001.jpg","cne-001-b.jpg","cne-001-c.jpg","cne-001-d.jpg"] },
-  { kode: "lv-001",kategori: "aksesoris", nama: "anting hati-the goats dept", harga: 19000, link: "https://s.shopee.co.id/7Ky1GQujwg", foto:["lv-001.jpg","lv-001-b.jpg","lv-001-c.jpg","lv-001-d.jpg"] },
+  { kode: "lv-001",kategori: "aksesoris", nama: "anting hati-the goats dept", harga: 19000, link: "https://s.shopee.co.id/7Ky1GQujwg", foto:["lv-002.jpg","lv-002-b.jpg","lv-002-c.jpg","lv-002-d.jpg"] },
 
 
 
