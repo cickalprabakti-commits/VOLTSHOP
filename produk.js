@@ -33,6 +33,7 @@ window.PRODUK = [
   { kode: "ts-001",kategori: "fashion", nama: "tas Selempang wanita", harga: 25000, link: "https://s.shopee.co.id/3qO84ASYh2", foto:["ts-001.jpg","ts-001-b.jpg","ts-001-c.jpg","ts-001-d.jpg"] },
   { kode: "cne-001",kategori: "aksesoris", nama: "Uzi Necklace-The Goats Dept", harga: 10000, link: "https://s.shopee.co.id/3qO8HsDwcL", foto:["cne-001.jpg","cne-001-b.jpg","cne-001-c.jpg","cne-001-d.jpg"] },
   { kode: "lv-001",kategori: "aksesoris", nama: "anting hati-the goats dept", harga: 19000, link: "https://s.shopee.co.id/7Ky1GQujwg", foto:["lv-002.jpg","lv-002-b.jpg","lv-002-c.jpg","lv-002-d.jpg"] },
+  { kode: "fp-001",kategori: "furniture", nama: "Meja Kecil Kamar Meja Samping Minimalis Meja Samping Tempat Tidur Meja kopi Rak-sweet home", harga: 154000, link: "https://s.shopee.co.id/8KqgYh9zxk", foto:["fp-001.jpg","fp-001-b.jpg","fp-001-c.jpg","] },
 
 
 
