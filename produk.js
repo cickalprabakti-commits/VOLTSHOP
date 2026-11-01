@@ -34,6 +34,8 @@ window.PRODUK = [
   { kode: "cne-001",kategori: "aksesoris", nama: "Uzi Necklace-The Goats Dept", harga: 10000, link: "https://s.shopee.co.id/3qO8HsDwcL", foto:["cne-001.jpg","cne-001-b.jpg","cne-001-c.jpg","cne-001-d.jpg"] },
   { kode: "lv-001",kategori: "aksesoris", nama: "anting hati-the goats dept", harga: 19000, link: "https://s.shopee.co.id/7Ky1GQujwg", foto:["lv-002.jpg","lv-002-b.jpg","lv-002-c.jpg","lv-002-d.jpg"] },
   { kode: "fp-001",kategori: "furniture", nama: "Meja Kecil Kamar Meja Samping Minimalis Meja Samping Tempat Tidur Meja kopi Rak-sweet home", harga: 154000, link: "https://s.shopee.co.id/8KqgYh9zxk", foto:["fp-001.jpg","fp-001-b.jpg","fp-001-c.jpg","] },
+{ kode: "fy-001",kategori: "lainnya", nama: "pylox cat/pengkilap body motor-nippon paint", harga: 50000, link: "https://s.shopee.co.id/7puSrtEiaz", foto:["fy-001.jpg","fy-001-b.jpg","fy-001-c.jpg","] },
+                                                                                                                                                                                                              
 
 
 
@@ -51,6 +53,8 @@ window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "scincare"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "aksesoris"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "furniture"; });
 window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "perfume"; });
+window.PRODUK.forEach(function(p){ if(!p.kategori) p.kategori = "lainnya"; });
+
 
 
 
